@@ -93,7 +93,7 @@ HEALTHCHECK --interval=30s --timeout=10s \
   CMD curl -f http://localhost:8065/api/v4/system/ping || exit 1
 
 # Configure entrypoint and command
-COPY entrypoint.sh /
+COPY ./entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 WORKDIR /mattermost
 CMD ["mattermost"]
