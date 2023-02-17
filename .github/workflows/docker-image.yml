@@ -38,7 +38,7 @@ jobs:
         if: steps.set-version.outputs.status == 'success'
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./build/
           file: ./build/Dockerfile
           platforms: linux/arm64
           push: true
